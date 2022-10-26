@@ -3,7 +3,7 @@ import { LightningElement } from "lwc";
 export default class App extends LightningElement {
   handleShowModal() {
     const modal = this.template.querySelector("c-modal");
-    console.log("test123")
+    console.log("test123456")
     modal.show();
   }
 
@@ -32,8 +32,10 @@ export default class App extends LightningElement {
               // const modal = this.template.querySelector("c-modal");
               // modal.show();
 
+
+            // Call Child Component Function
             const modalBuilder = this.template.querySelector("c-modalbuilder");
-            modalBuilder.iterateJson();
+            modalBuilder.generateJson();
 
 
         }

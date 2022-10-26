@@ -12,45 +12,58 @@ export default class Modalbuilder extends LightningElement {
     "fields":[
       {
         "elementType": "dropdown",
-        "isElementValDynamic": true,
         "elementTitle": "Outcome",
-        "elementValue": ['Accepted', 'Declined'],
-        "elementRequired": true,
-        "elementDisabled": false,
-        "isConditional" : true,
+        "elementValue": null,
+        "elementArrayValues": ['Accepted', 'Declined'],
       }, 
       {
         "elementType": "text",
-        "isElementValDynamic": true,
         "elementTitle": "Outcome",
-        "elementValue": 'SomeFieldYOO',
-        "elementRequired": true,
-        "elementDisabled": false,
-        "isConditional" : true,
+        "elementValue": 'Hello Name Field',
+        "elementArrayValues": null,
       }
     ]
   };
 
 
-   @api iterateJson(){
-    let json = this.jsonBody;
 
-    console.log('currentField - ' + json.selectedDisposition)
-    console.log('fieldTitle - ' + json.fields[0].elementTitle)
+
+   @api generateJson(){
+
+
+      console.warn('Inside Generate JSON 123');
+      // Call Child Component Function
+      const modal = this.template.querySelector("c-modal");
+      modal.generateModal(this.jsonBody);
+      modal.show();
+
+
+
+
+
+    // generateModalElements(this.jsonBody);
+
+
+  //   let json = this.jsonBody;
+
+  //   console.log('currentField - ' + json.selectedDisposition)
+  //   console.log('fieldTitle - ' + json.fields[0].elementTitle)
     
-    for(let i = 0; i < json.fields.length; i++){
-      let field = json.fields[i];
-      console.log(field.elementType);
+  //   for(let i = 0; i < json.fields.length; i++){
+  //     let field = json.fields[i];
+  //     console.log(field.elementType);
 
 
-      if(field.elementType == 'dropdown'){
-        this.createDropdownElement(field);
+  //     if(field.elementType == 'dropdown'){
+  //       this.createDropdownElement(field);
 
-      } else if(field.elementType == 'text'){
-        this.createTextFieldElement(field);
+  //     } else if(field.elementType == 'text'){
+  //       this.createTextFieldElement(field);
 
-      }
-    }
+  //     }
+  //   }
+
+
   }
 
 

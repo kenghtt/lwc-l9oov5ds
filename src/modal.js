@@ -13,4 +13,20 @@ export default class Modal extends LightningElement {
   handleDialogClose() {
     this.showModal = false;
   }
+
+
+  @api generateModal(jsonBody){
+
+    
+    console.log('JSON BODY ----' + jsonBody.flow)
+    console.warn('Inside Generate Modal Element WOOT WOOT WOOT!!!')
+
+  this.createElement(jsonBody);
+  }
+
+  createElement(jsonBody){
+    console.log('Test123');
+
+  }
+
 }
