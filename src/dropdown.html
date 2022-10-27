@@ -1,19 +1,23 @@
 <template>
+  <p>This example creates a simple layout with field headers.</p>
+  <div class="c-container">
+    <lightning-layout>
 
+      <lightning-layout-item padding="">
+        <div class="header-column">
+          <p>Outcome Reason</p>
+        </div>
+      </lightning-layout-item>
 
+      <lightning-layout-item padding="">
+        <div class="header-column">
 
+          <lightning-combobox name="progress" value={value} placeholder="Select Progress" options={options}
+            onchange={handleChange}></lightning-combobox>
 
-  <lightning-layout-item padding="around-small">
+        </div>
+      </lightning-layout-item>
 
-    <h2 class="textAlignment">
-      <b> Caller Name : </b>
-    </h2>
-  </lightning-layout-item>
-  <lightning-layout-item padding="around-small">
-
-    <lightning-combobox name="progress" label="Status" value={value} placeholder="Select Progress" options={options}
-      onchange={handleChange}></lightning-combobox>
-  </lightning-layout-item>
-
-  <p>Selected value is: {value}</p>
+    </lightning-layout>
+  </div>
 </template>

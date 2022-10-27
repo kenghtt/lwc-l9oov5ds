@@ -5,9 +5,11 @@ export default class Dropdown extends LightningElement {
 
     get options() {
         return [
-            { label: 'New', value: 'new' },
-            { label: 'In Progress', value: 'inProgress' },
-            { label: 'Finished', value: 'finished' },
+            { label: 'Report Only – Chat', value: 'reportOnlyChat' },
+            { label: 'Verbal Education Only', value: 'verbalEducationOnly' },
+            { label: 'Verbal Education and Report Provided', value: 'verbalEducationAndReportProvided' },
+            { label: 'Warm Transferred', value: 'warmTransferred' },
+
         ];
     }
 

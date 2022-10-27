@@ -22,24 +22,9 @@ export default class Modal extends LightningElement {
     console.log('JSON BODY ----' + jsonBody.flow)
     console.warn('Inside Generate Modal Element WOOT WOOT WOOT!!!')
 
-  this.createElement(jsonBody);
   }
 
-  createElement(jsonBody){
-    const modalContainer = document.getElementById('jeremy');
 
-    // alert(modalContainer)
-
-    let div = document.createElement('div');
-    div.innerHTML = 'Here is the Text Dude';
-    div.innerText = 'Some Text Example Here!!!'
-    
-    // this.modalContainer.appendChild(div);
-
-
-    console.log('Test123');
-
-  }
 
 
 }
