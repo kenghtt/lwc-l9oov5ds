@@ -1,0 +1,19 @@
+<template>
+
+
+
+
+  <lightning-layout-item padding="around-small">
+
+    <h2 class="textAlignment">
+      <b> Caller Name : </b>
+    </h2>
+  </lightning-layout-item>
+  <lightning-layout-item padding="around-small">
+
+    <lightning-combobox name="progress" label="Status" value={value} placeholder="Select Progress" options={options}
+      onchange={handleChange}></lightning-combobox>
+  </lightning-layout-item>
+
+  <p>Selected value is: {value}</p>
+</template>

@@ -1,4 +1,5 @@
-import { LightningElement, api } from "lwc";
+import { LightningElement, createElement, api } from "lwc";
+
 
 
 export default class Modal extends LightningElement {
@@ -25,8 +26,20 @@ export default class Modal extends LightningElement {
   }
 
   createElement(jsonBody){
+    const modalContainer = document.getElementById('jeremy');
+
+    // alert(modalContainer)
+
+    let div = document.createElement('div');
+    div.innerHTML = 'Here is the Text Dude';
+    div.innerText = 'Some Text Example Here!!!'
+    
+    // this.modalContainer.appendChild(div);
+
+
     console.log('Test123');
 
   }
+
 
 }

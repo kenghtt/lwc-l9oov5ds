@@ -34,8 +34,9 @@ export default class Modalbuilder extends LightningElement {
       console.warn('Inside Generate JSON 123');
       // Call Child Component Function
       const modal = this.template.querySelector("c-modal");
-      modal.generateModal(this.jsonBody);
       modal.show();
+      modal.generateModal(this.jsonBody);
+
 
 
 
