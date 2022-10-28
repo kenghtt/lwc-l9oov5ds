@@ -3,17 +3,18 @@
   <div class="c-container">
     <lightning-layout>
 
-      <lightning-layout-item padding="">
-        <div class="header-column">
-          <p>Outcome Reason</p>
-        </div>
+      <lightning-layout-item size="4">
+        <h2 class="textAlignment">
+          <p>Outcome Reason :</p>
+        </h2>
       </lightning-layout-item>
 
-      <lightning-layout-item padding="">
+      <lightning-layout-item size="8">
         <div class="header-column">
 
-          <lightning-combobox name="progress" value={value} placeholder="Select Progress" options={options}
-            onchange={handleChange}></lightning-combobox>
+
+          <lightning-combobox name="progress" label="" variant="label-hidden" value={value} placeholder="Select test"
+            options={options} onchange={handleChange}></lightning-combobox>
 
         </div>
       </lightning-layout-item>
